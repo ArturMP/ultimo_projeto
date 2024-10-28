@@ -50,11 +50,9 @@ async function quantidadeUsuariosPorRede() {
         }
     }
 
-import { getCSS, criarGrafico } from "./common.js"
-
-// Trecho de código suprimido
-
-criarGrafico(data, layout)
-}
+    const grafico = document.createElement('div')
+    grafico.className = 'grafico'
+    document.getElementById('graficos-container').appendChild(grafico)
+    Plotly.newPlot(grafico, data, laytout)
 
 quantidadeUsuariosPorRede()
